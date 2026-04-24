@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { DevPaidToggle } from "./components/DevPaidToggle";
 import { QuoteCard } from "./components/QuoteCard";
 import { RankCard } from "./components/RankCard";
 import { COPY } from "@/lib/copy";
@@ -34,7 +35,7 @@ export default function Dashboard() {
       <header className="flex items-center justify-between">
         <div>
           <h1 className="serif text-3xl md:text-4xl tracking-wide">{COPY.appTitle}</h1>
-          <span className="gold-rule mt-3" aria-hidden />
+          <DevPaidToggle />
           <p className="mt-3 max-w-md text-sm text-stone-muted">{COPY.tagline}</p>
         </div>
       </header>
