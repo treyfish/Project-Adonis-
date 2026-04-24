@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <filter id="n">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+    <feColorMatrix values="0 0 0 0 0.172
+                           0 0 0 0 0.172
+                           0 0 0 0 0.172
+                           0 0 0 0.04 0"/>
+  </filter>
+  <rect width="400" height="400" fill="#f5f1e8"/>
+  <rect width="400" height="400" filter="url(#n)"/>
+  <filter id="v">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="3" seed="3"/>
+    <feColorMatrix values="0 0 0 0 0.10
+                           0 0 0 0 0.10
+                           0 0 0 0 0.10
+                           0 0 0 0.05 0"/>
+  </filter>
+  <rect width="400" height="400" filter="url(#v)"/>
+</svg>

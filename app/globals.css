@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f5f1e8;
+  --color-card: #fafbf3;
+  --color-marble: #f5f2ed;
+  --color-stone: #2c2c2c;
+  --color-stone-muted: #5a5a5a;
+  --color-gold: #b8860b;
+  --color-gold-soft: #d4a42a;
+  --color-blue: #4a6b8a;
+  --color-line: rgba(44, 44, 44, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-stone);
+  --color-card: var(--color-card);
+  --color-marble: var(--color-marble);
+  --color-stone: var(--color-stone);
+  --color-stone-muted: var(--color-stone-muted);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-blue: var(--color-blue);
+  --color-line: var(--color-line);
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background-color: var(--color-cream);
+  background-image: url("/marble.svg");
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  color: var(--color-stone);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3, h4, h5, h6, .serif {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-feature-settings: "liga", "dlig";
+  letter-spacing: -0.01em;
+}
+
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 0 rgba(44, 44, 44, 0.02);
+}
+
+.gold-rule {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-soft));
+}
+
+.fade-in {
+  animation: fade-in 400ms ease-out both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { animation: none; }
+}
